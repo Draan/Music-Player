@@ -1,0 +1,159 @@
+html body
+
+{
+	margin: 0px;
+	padding: 0px;
+	background: #CCCCCC;
+	font-family: Verdana,sans-serif;
+	text-align: center;
+	overflow-y: scroll;
+	color: #ffffff;
+}
+
+body a:link, a:visited {
+	color: #ffffff;
+}
+
+.containeroo {
+	margin-left: auto;
+	margin-right: auto;	
+	width: 450px;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;	
+	cursor: default;
+}
+
+.topnav div {
+	float: left;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 150px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select:none;
+}
+
+.topnav div:hover {
+	background-color: #007AFF; 
+}
+
+.topnav div.active {
+	background-color: #4CAF50;
+}
+
+.volume {
+	background-color: #333;	
+	margin-left: auto;
+	margin-right: auto;	
+	height: 35px;
+	width: 450px;
+}
+
+.volume input{
+	float: left;
+	margin-left: 8px;
+	border-radius: 3px;
+	height: 32px;
+	cursor: pointer;
+}
+
+.volume img{
+	float: left;
+	margin-left: 2px;
+}
+
+.volume img:hover{
+	background-color: #007AFF; 
+}
+
+.search {
+	margin-left: auto;
+	margin-right: auto;	
+	margin-bottom: 10px;
+	height: 35px;
+	width: 450px;
+}
+
+.search input{
+	float: left;
+	width: 410px;
+	margin-top: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 6px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.playing {
+	margin-bottom: 10px;
+	margin-top: -10px;
+	padding-top: 10px;
+	height: 35px;
+	width:450px;
+	font-size: 20px;
+	color: #00cc00;
+}
+
+.hidden {
+	display: none;
+}
+
+.mainDiv {
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.entry {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-bottom: 5px;
+	border: 2px solid #000000;
+	border-radius: 3px;
+	background-color: #333;	
+	line-height: 32px;
+	font-family: "Lucida Console", Monaco, monospace;
+	width: 450px;
+	height: 32px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.entry:hover {
+	background: #007AFF;
+}
+
+.category {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-bottom: 5px;
+	border: 2px solid #000000;
+	border-radius: 3px;
+	line-height: 32px;
+	font-family: "Lucida Console", Monaco, monospace;
+	width: 450px;
+	height: 32px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	color: #000000;
+	background-color: #87E5FF;	
+	font-size: 25px;
+}
+
+.bottom {
+	border-top: 2px solid green; 
+	position: fixed;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	background-color: #96D4D4;	
+}

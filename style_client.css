@@ -1,0 +1,56 @@
+@font-face {
+    font-family: customText;
+    src: url("thefont.ttf");
+}
+
+html body {
+	margin: 0px;
+	padding: 0px;
+	background: #CCCCCC;
+	font-family: customText,Verdana,sans-serif;
+	text-align: center;
+	overflow-y: scroll;
+	color: #000000;
+}
+
+body a:link, a:visited {
+	color: #000000;
+}
+
+.containeroo {
+	border: 1px solid #000000;
+	background-color: rgba(220, 220, 220, 0.4);
+	margin-left: auto;
+	margin-right: auto;	
+	width: 450px;
+}
+
+.clientEntry {
+	cursor: default;
+	height: 35px;
+	width: 450px;
+	font-size: 20px;
+	color: #0000cc;
+	float: left;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select:none;
+}
+
+.volume {
+	margin-left: auto;
+	margin-right: auto;	
+	height: 35px;
+	width: 450px;
+}
+
+.volume input{
+	float: left;
+	margin-left: 8px;
+	border-radius: 3px;
+	height: 32px;
+	cursor: pointer;
+}
+

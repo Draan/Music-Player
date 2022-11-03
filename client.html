@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+	<meta charset=UTF-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style_client.css" rel="stylesheet" type="text/css">
+	<title>Draan's Musical Client For Edgy Rogues Who Lost Their Parents In A Fire</title>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="core_client.js"></script>
+</head>
+<body style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/04/Fantasy-wallpapers-HD.jpg');">
+
+<div class="containeroo" style="background-color: rgba(200, 200, 200, 0.4); border: 100px solid #000000; border-image: url(border.png) 100 round;">
+	<div id="ChromePlay" style="display: none;">
+		<p style="color:#000000;"><font color="#cc0000">Eerst even op de play knop hieronder klikken</font><br/ >
+		dan geef je toestemming om geluiden af te spelen in de achtergrond.</p>
+		<div onclick="PlayAndHide();" style="border: #C0C0C0 2px solid; background-color: #F0F0F0; color:#00CC00; width: 200px; padding: 8px; text-align: center; margin: 0 auto; cursor: pointer;">Klik hier</div> 
+	</div>
+	<div class="clientEntry">Master Volume</div>
+	<div id="divMaster_volume" class="volume">
+		<input id="volumeMaster" style="width:435px;" type="range" min="0" max="1" value="0.5" id="fader" step="0.01" oninput="masterVolume(value);" onmouseup="createCookie();">
+	</div><br /><br /><br /><br />
+	<div id="divPlayingMusic" class="clientEntry">Music: Waiting for signal..</div>
+	<div id="divMusic_volume" class="volume">
+		<input id="volumeMusic" style="width:435px;" type="range" min="0" max="1" value="0.5" id="fader" step="0.01" oninput="music_player.volume = document.getElementById('volumeMaster').value * value;" onmouseup="createCookie();">
+	</div>
+	<div id="divPlayingAtmos" class="clientEntry">Atmosphere: Waiting for signal..</div>	
+	<div id="divAmbience_volume" class="volume">
+		<input id="volumeAmbience" style="width:435px;" type="range" min="0" max="1" value="0.5" id="fader" step="0.01" oninput="ambience_player.volume = document.getElementById('volumeMaster').value * value;" onmouseup="createCookie();">
+	</div>
+	<div id="divPlayingEffect" class="clientEntry">Effect: Waiting for signal..</div>
+	<div id="divEffects_volume" class="volume">
+		<input id="volumeEffects" style="width:435px;" type="range" min="0" max="1" value="0.5" id="fader" step="0.01" oninput="effects_player.volume = document.getElementById('volumeMaster').value * value;" onmouseup="createCookie();">
+	</div>
+	<p class="clientEntry" onmousedown="effects_player.src = 'effects/store_bell.mp3'; effects_player.play();">klik hier om het volume te testen met een sound effect</p>
+
+	Hoe te gebruiken: <br/>
+	Deze website open laten staan in de achtergrond. De website laad het geluid vanzelf, op het moment dat de DJ het geluid afspeelt.
+	<br /><br />
+	Je kunt het volume aanpassen met de slider.
+	<p style="text-align: left; color:#000000;">
+	Nieuwe features: <br />
+	&bull; Master volume <br />
+	&bull; Website onthoud laatst ingestelde volume <br />
+	&bull; Nieuw design
+	</p>
+		
+</div>
+<script>
+	setTimeout(function(){
+		loadCore();
+	}, 500);
+</script>
+</body>
+</html>
+

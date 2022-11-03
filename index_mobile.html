@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=500, initial-scale=1">
+<link href="style_mobile.css" rel="stylesheet" type="text/css">
+<title>Draan's Musical Control For Mindflayers Who Lost Their Tentacles After Experimenting With Fire</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="nosleep.js"></script>
+<script src="files.js"></script>
+<script src="core.js"></script>
+</head>
+<body>
+
+<div id="containeree" class="containeroo">
+	<div class="topnav">
+		<div id="menuMusic" onclick="selectType('music');">Music</div>
+		<div id="menuAmbience" onclick="selectType('ambience');">Atmosphere</div>
+		<div id="menuEffects" onclick="selectType('effects');">Sound Effects</div>
+	</div>
+	<div id="divMusic_volume" class="volume">
+		<img src="stop.png" width="35" height="35" onclick="MusicStop();">
+		<img src="skip.png" width="35" height="35" onclick="music_player.currentTime = 500;">
+		<input id="volumeMusic" style="width:350px;" type="range" min="0" max="1" value="0.0" id="fader" step="0.01" oninput="music_player.volume = value;">
+	</div>
+	<div id="divAmbience_volume" class="volume hidden">
+		<img src="stop.png" width="35" height="35" onclick="AmbienceStop();">
+		<input id="volumeAmbience" style="width:390px;" type="range" min="0" max="1" value="0.0" id="fader" step="0.01" oninput="ambience_player.volume = value;">
+	</div>
+	<div id="divEffects_volume" class="volume hidden">
+		<img src="stop.png" width="35" height="35" onclick="EffectsStop();">
+		<input id="volumeEffects" style="width:390px;" type="range" min="0" max="1" value="0.0" id="fader" step="0.01" oninput="effects_player.volume = value;">
+	</div>
+	<div id="divSearch" class="search hidden" oninput="DoSearch();">
+		<input type="text" id="searchText" placeholder="Search title, tags..">
+		<img src="clear.png" width="32" height="32" onclick="document.getElementById('searchText').value=''; DoSearch();">
+	</div>
+	<div id="divPlayingAtmos" class="topnav playing hidden">Paused</div>
+	<div id="divPlayingMusic" class="topnav playing" style="font-size: 12px;">Paused</div>
+	<div class="mainDiv" id="divMusic"></div>
+	<div class="mainDiv hidden" id="divAmbience"></div>
+	<div class="mainDiv hidden" id="divEffects"></div>
+	<br /><br />
+</div>
+	
+<!-- <div class="bottom"><a href="#" onclick="OpenCheats();">Hotkey Cheat Sheet</a></div> !-->
+<script>
+	var noSleep = new NoSleep();
+	//if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		document.addEventListener('click', function enableNoSleep() {
+			document.removeEventListener('click', enableNoSleep, false);
+			noSleep.enable();
+		}, false);
+	//}
+
+	setTimeout(function(){
+		loadCore();
+	}, 1000);
+</script>
+<div onclick="checkFullscreen();" style="border: #C0C0C0 2px solid; background-color: #F0F0F0; color:#00CC00; width: 450px; padding: 8px; text-align: center; margin: 0 auto; cursor: pointer;">Fullscreen</div> 
+</body>
+</html>
+
